@@ -12,6 +12,7 @@ env:
   - MONGODB_VERSION=3.2.13
 
 services: mongodb
+stage: test
 before_script:
 - npm install -g mongodb-runner
 - mongodb-runner start
