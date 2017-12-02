@@ -7,6 +7,10 @@ branches:
   only:
     - master
     - /^greenkeeper/.*$/
+cache:
+  directories:
+  - node_modules
+  - "$HOME/.mongodb/versions"
 
 jobs:
   include:
