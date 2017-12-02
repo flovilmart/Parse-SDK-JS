@@ -7,6 +7,8 @@ branches:
   only:
     - master
     - /^greenkeeper/.*$/
+    - /^v?[0-9]+.[0-9]+.[0-9]+(-.*)?$/
+
 cache:
   directories:
   - node_modules
@@ -37,7 +39,7 @@ jobs:
             branches:
               only:
               - master
-              - /^[0-9]+.[0-9]+.[0-9]+(-.*)?$/
+              - /^v?[0-9]+.[0-9]+.[0-9]+(-.*)?$/
         - provider: npm
           skip_cleanup: true
           email:
