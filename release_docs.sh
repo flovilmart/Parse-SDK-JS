@@ -1,10 +1,10 @@
 #!/bin/sh -e
-if [ "${TRAVIS_PULL_REQUEST_SLUG}" = "" ];
+if [ "${TRAVIS_REPO_SLUG}" = "" ];
 then
-  echo "Cannot release docs without TRAVIS_PULL_REQUEST_SLUG set"
-  exit 1;
+  echo "Cannot release docs without TRAVIS_REPO_SLUG set"
+  exit 0;
 fi
-REPO="https://github.com/${TRAVIS_PULL_REQUEST_SLUG}"
+REPO="https://github.com/${TRAVIS_REPO_SLUG}"
 
 rm -rf docs
 git clone -b gh-pages --single-branch $REPO ./docs
