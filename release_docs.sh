@@ -1,4 +1,5 @@
 #!/bin/sh -e
+set -x
 if [ "${TRAVIS_REPO_SLUG}" = "" ];
 then
   echo "Cannot release docs without TRAVIS_REPO_SLUG set"
